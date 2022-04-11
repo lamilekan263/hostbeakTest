@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 const Todo = () => {
   return (
-    <div>Todo</div>
+    <div className="m-7">
+      <Title title="Todo" />
+    </div>
   )
 }
 

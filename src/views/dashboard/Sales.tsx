@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 function Sales() {
   return (
-    <div>Sales</div>
+    <div className="m-7">
+      <Title title="Sales" />
+    </div>
   )
 }
 

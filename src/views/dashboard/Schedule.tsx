@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 const Schedule = () => {
   return (
-    <div>Schedule</div>
+    <div className="m-7">
+      <Title title="Schedule" />
+    </div>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 const Vendors = () => {
   return (
-    <div>Vendors</div>
+    <div className="m-7">
+      <Title title="Vendors" />
+    </div>
   )
 }
 

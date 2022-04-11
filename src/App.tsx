@@ -3,9 +3,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
-import AuthLayout from './layout/AuthLayout'
+
 import DashboardLayout from './layout/DashboardLayout'
-import Register from './views/auth/RegisterPage'
+import RegisterPage from './views/auth/RegisterPage'
 import Accounting from './views/dashboard/Accounting';
 import Banking from './views/dashboard/Banking';
 import Billing from './views/dashboard/Billing';
@@ -32,7 +32,10 @@ function App() {
       <div className=" "> 
         <div>
           <Routes>
-            <Route element={<DashboardLayout />}>
+            
+              <Route path="/" element={<RegisterPage />} />
+ 
+            <Route path="/" element={<DashboardLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/accounting" element={<Accounting />} />
               <Route path="/banking" element={<Banking />} />
@@ -54,9 +57,8 @@ function App() {
               <Route path="/welcome" element={<Welcome />} />
               <Route />
             </Route>
-            <Route element={<AuthLayout />}>
-              <Route path="/register" element={<Register />} />
-            </Route> </Routes>
+            
+          </Routes>
         </div>
       </div>
     </BrowserRouter>

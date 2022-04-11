@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 const UploadDocs = () => {
   return (
-    <div>UploadDocs</div>
+    <div className="m-7">
+      <Title title="Upload Docs" />
+    </div>
   )
 }
 

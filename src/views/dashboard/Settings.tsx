@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 function Settings() {
   return (
-    <div>Settings</div>
+    <div className="m-7">
+      <Title title="Settings" />
+    </div>
   )
 }
 

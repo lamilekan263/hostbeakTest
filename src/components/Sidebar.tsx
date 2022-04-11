@@ -5,10 +5,10 @@ import { sideBarRoute } from "../utils"
 
 function Sidebar() {
     return (
-        <div className=" h-screen max-w-96 px-11 ">
-            <div className="flex flex-col">
+        <div className="overflow-y-auto py-4 px-3  rounded">
+            <ul className="space-y-2">
                 {sideBarRoute.map(sidebar => <Disclosure text={sidebar.text} primaryRoute={sidebar.route} children={sidebar.children} />)}
-            </div>
+            </ul>
             <div className=" h-12 w-full flex justify-center items-center border-0 rounded-lg">
                 <p className="font-gilroy">Logout</p>
             </div>

@@ -1,9 +1,11 @@
 import React from 'react'
+import Title from '../../components/Title'
 
 function Dashboard() {
   return (
-    <div className="  h-screen border-0 rounded-full">Dashboard</div>
-  )
+    <div className="m-7">
+      <Title title="Dashboard" />
+    </div>)
 }
 
 export default Dashboard

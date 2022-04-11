@@ -9,7 +9,7 @@ function DashboardLayout() {
         <div className="w-full  bg-primaryWhite  ">
             <Header />
         <div className="flex ">
-            <aside className="">
+                <aside className="w-96" >
                 <Sidebar />
             </aside>
             <main className="grow bg-white">

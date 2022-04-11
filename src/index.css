@@ -8,5 +8,22 @@
         font-family: "Gilroy";
         font-weight:400;
         src: url('./assets/fonts/gilroy/Gilroy-Regular.ttf');
-    }
+    },
+    @font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/inter/Inter-Bold.ttf);
+},
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
 }
+@font-face {
+    font-family: 'Roobert';
+    src: url(./assets/fonts/roobert/Roobert-Regular.ttf);
+}
+
+
+}
+
+
