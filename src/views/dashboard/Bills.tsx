@@ -1,16 +1,17 @@
 
 import DateInput from '../../components/DateInput'
+import FileUploadInput from '../../components/FileUploadInput'
 import SelectOption from '../../components/SelectOption'
 import Title from '../../components/Title'
 import { tableHeaders } from '../../utils'
 
-// ["choose", "cheese", ]
+
 
 const Bills = () => {
   return (
     <div className="m-7">
       <Title title="Add Bill" />
-      <div className="grid grid-cols-3 gap-9 w-8/12 mb-5 justify-center">
+      <div className=" grid grid-flow-col auto-cols-max grid-cols-3 gap-9 w-8/12 mb-5 justify-center p-2">
         <div>
           <div className="my-2">
             <p className="font-inter text-[#304156] text-sm mb-2">Vendor</p>
@@ -22,31 +23,31 @@ const Bills = () => {
           </div>
           <div className="my-2">
             <p className="font-inter text-[#304156] text-sm mb-2">Upload Copy of Bill</p>
-            <SelectOption options={["choose"]} />
+            <FileUploadInput />
           </div>
         </div>
         <div> <div>
-          <div className="my-2">
+          <div className="my-1">
             <p className="font-inter text-[#304156] text-sm mb-2">Date</p>
             <DateInput />
           </div>
-          <div className="my-2">
+          <div className="my-1">
             <p className="font-inter text-[#304156] text-sm mb-2">Due Date</p>
             <DateInput />
           </div>
           <div className="my-2">
             <p className="font-inter text-[#304156] text-sm mb-2">P.O/S.O</p>
-            <SelectOption options={["choose"]} />
+            <textarea className="border w-full" />
           </div>
         </div></div>
         <div> <div>
           <div className="my-2">
             <p>Bill #</p>
-            <SelectOption options={["choose"]} />
+            <textarea className="border w-full"/>
           </div>
-          <div className="my-2 row-start-1 row-end-4 bg-red-200 h-full">
+          <div className="my-2 col-start-1 col-end-4   h-28">
             <p>Notes</p>
-            <SelectOption options={["choose"]} />
+            <textarea className="border w-full h-full" />
           </div>
 
         </div></div>
@@ -76,16 +77,22 @@ const Bills = () => {
                         <SelectOption options={["choose"]} />
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                        <input type="text" className="w-full border" />
+                        <input type="text" className="w-full border py-2 px-5" />
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                        <input type="text" className="w-full border" />
+                        <input type="text" className="w-full border py-2 px-5" value={1}/>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                        <input type="text" className="w-full border" />
+                        <input type="text" className="w-full border py-2 px-5" value={0}/>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                        <input type="text" className="w-full border" />
+                        <div className="flex space-x-4 items-center">
+                          <input type="text" className="w-full border py-2 px-5" />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 21H21" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.5 13.5L14.5 3.50002C15.3284 2.67159 16.6716 2.67159 17.5 3.50002C18.3284 4.32845 18.3284 5.67159 17.5 6.50002L7.5 16.5L3.5 17.5L4.5 13.5Z" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        </div>
                       </td>
                       <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         <div className="flex space-x-4 items-center">
@@ -106,8 +113,15 @@ const Bills = () => {
         </div>
 
         {/* subtotal */}
-        <div className="flex">
-
+        <div className="flex flex-col  my-3 font-inter font-medium text-sm text-[#1D2939] ">
+          <div className="flex justify-end space-x-3"> 
+            <p>Subtotal:</p>
+            <p>N0.00</p>
+          </div>
+          <div className="flex justify-end space-x-3">
+            <p>Total (NGN):</p>
+            <p>N0.00</p>
+          </div>
         </div>
       </div>
 

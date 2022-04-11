@@ -14,10 +14,10 @@ function RegisterPage() {
   return (
     <div className="flex  max-h-screen  ">
       <div className="basis-1/2  bg-hero-Image bg-no-repeat bg-cover relative" >
-        <p className="font-poppins font-light text-xl text-white absolute bottom-20 left-64 text-xl w-52 leading-9">
-          Building exceptional services
-          with Back Office Support
-          and Business Perfomance
+        <p className="font-poppins font-light text-xl text-white absolute bottom-20 left-64 text-xl w-64 leading-9">
+          Building exceptional <br/>
+          services with Back Office <br />
+          Support and Business <br/> Perfomance
         </p>
       </div>
       <div className="basis-1/2 py-24 pl-10 pr-24">
@@ -44,9 +44,11 @@ function RegisterPage() {
               </div>
               <p className="text-lighterBlue font-roobert">Forgot Password?</p>
             </div>
+            <Link to="/view-report">
             <div className="flex items-center justify-center bg-lighterBlue shadow-lg rounded-md h-14">
-              <Link to="/view-report" className="font-roobert font-medium text-white">Sign Up</Link>
-            </div>
+              <p  className="font-roobert font-medium text-white">Sign Up</p>
+              </div>
+            </Link>
             <div className="flex py-5 items-center justify-center ">
               <div className="grow border-t border-gray-400 h-14 w-full" />
               <div className="flex items-center justify-center w-full ">
