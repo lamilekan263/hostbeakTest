@@ -11,8 +11,6 @@ interface InputInterface {
 
 const Input = (props: InputInterface) => {
   const [isMyInputFocused, setIsMyInputFocused] = useState(false);
-
-  console.log(isMyInputFocused);
   
   const { type, onChange, placeholder,label } = props
   return (
