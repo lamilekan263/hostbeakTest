@@ -36,7 +36,7 @@ function App() {
               <Route path="/" element={<RegisterPage />} />
  
             <Route path="/" element={<DashboardLayout />}>
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard"  element={<Dashboard />} />
               <Route path="/accounting" element={<Accounting />} />
               <Route path="/banking" element={<Banking />} />
               <Route path="/billing" element={<Billing />} />

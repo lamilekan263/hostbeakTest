@@ -8,7 +8,7 @@ const ViewReport = () => {
     <div className="m-7">
       <Title title="View reports" />
 
-      {reports.map(report => <ReportCard monthOfReport={report.monthOfReport} date={report.date} new={report.new} id={report.id} />)}
+      {reports.map((report,index) => <ReportCard key={index} monthOfReport={report.monthOfReport} date={report.date} new={report.new} id={report.id} />)}
     </div>
   )
 }

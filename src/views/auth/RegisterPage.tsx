@@ -1,22 +1,23 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Input from "../../components/common/form/Input";
 
 function RegisterPage() {
-  
+
   const [formDetail, setFormDetails] = useState({})
-  
+
 
   const onChange = () => {
-    setFormDetails({...formDetail})
+    setFormDetails({ ...formDetail })
   }
 
   return (
     <div className="flex  max-h-screen  ">
       <div className="basis-1/2  bg-hero-Image bg-no-repeat bg-cover relative" >
         <p className="font-poppins font-light text-xl text-white absolute bottom-20 left-64 text-xl w-52 leading-9">
-          Building exceptional services 
-        with Back Office Support 
-        and Business Perfomance
+          Building exceptional services
+          with Back Office Support
+          and Business Perfomance
         </p>
       </div>
       <div className="basis-1/2 py-24 pl-10 pr-24">
@@ -35,7 +36,7 @@ function RegisterPage() {
             <Input type="email" onChange={onChange} placeholder="Enter your email" label="Email Address" />
             <Input type="password" onChange={onChange} placeholder="Enter your password" label="Password" />
             {/* remember me */}
-            
+
             <div className="flex justify-between items-center my-5">
               <div className="flex items-center space-x-4">
                 <input type="checkbox" className="p-2" />
@@ -44,15 +45,15 @@ function RegisterPage() {
               <p className="text-lighterBlue font-roobert">Forgot Password?</p>
             </div>
             <div className="flex items-center justify-center bg-lighterBlue shadow-lg rounded-md h-14">
-              <p className="font-roobert font-medium text-white">Sign Up</p>
+              <Link to="/view-report" className="font-roobert font-medium text-white">Sign Up</Link>
             </div>
-            <div className="flex items-center justify-center">
-              <hr className="h-14 w-full text-red-900 text-bold" />
-              <div className="flex items-center justify-center w-full">
-                <p className="font-roobert mt-5 text-[#82869A]">Got an Account?   </p>
-                <span className="text-lighterBlue ">Sign In</span>
+            <div className="flex py-5 items-center justify-center ">
+              <div className="grow border-t border-gray-400 h-14 w-full" />
+              <div className="flex items-center justify-center w-full ">
+                <p className="font-roobert mt-5 text-[#82869A]">Got an Account? <span className="text-lighterBlue ">Sign In</span>  </p>
+                
               </div>
-              <hr className="h-14 w-full text-red-900 text-bold" />
+              <div className="grow border-t border-gray-400 h-14 w-full" />
             </div>
           </form>
         </div>

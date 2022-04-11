@@ -1,21 +1,35 @@
+import WalletSvg from "../assets/svgs/WalletSvg"
+import BankingSvg from "../assets/svgs/BankingSvg";
+import CalcSvg from "../assets/svgs/CalcSvg"
+import ICdashboardSvg from "../assets/svgs/ICdashboardSvg"
+import PayrollSvg from "../assets/svgs/PayrollSvg"
+import PeopleSvg from "../assets/svgs/PeopleSvg"
+import PurchaseIconSvg from "../assets/svgs/PurchaseIconSvg"
+import SettingsSvg from "../assets/svgs/SettingSvg"
+import ShuttleSvg from "../assets/svgs/ShuttleSvg"
+import TablerReportSvg from "../assets/svgs/TablerReportSvg"
+
+
 export const sideBarRoute = [
 
     // welcome
     {
-        icon: "",
+        icon: (isActive: boolean) => (<ShuttleSvg isActive={isActive
+} />) ,
         text: "Welcome",
         route: "/welcome"
     },
     // dashboard
     {
-        icon: "",
+        icon: (isActive: boolean) => <ICdashboardSvg isActive={isActive
+} /> ,
         text: "Dashboard",
         route: "/dashboard",
-        
     },
     // sales
     {
-        icon: "",
+        icon: (isActive: boolean) => <WalletSvg isActive={isActive
+} />  ,
         text: "Sales",
         children: [
             {
@@ -26,7 +40,8 @@ export const sideBarRoute = [
     },
     // purchases
      {
-        icon: "",
+         icon: (isActive: boolean) => <PurchaseIconSvg isActive={isActive
+} /> ,
         text: "Purchases",
         children: [
             {
@@ -44,8 +59,9 @@ export const sideBarRoute = [
         ]
     },
     // accounting
-      {
-        icon: "",
+    {
+        icon: (isActive: boolean) => <CalcSvg isActive={isActive
+} />  ,
         text: "Accounting",
         children: [
             {
@@ -56,7 +72,8 @@ export const sideBarRoute = [
     },
     // banking
        {
-        icon: "",
+           icon: (isActive: boolean) => <BankingSvg isActive={isActive
+} /> ,
         text: "Banking",
         children: [
             {
@@ -67,7 +84,8 @@ export const sideBarRoute = [
     },
     // payroll
         {
-        icon: "",
+            icon: (isActive: boolean) => <PayrollSvg isActive={isActive
+            } /> ,
         text: "Payroll",
         children: [
             {
@@ -78,7 +96,8 @@ export const sideBarRoute = [
     },
     // reports
           {
-        icon: "",
+              icon: (isActive: boolean) => <TablerReportSvg isActive={isActive
+              } />,
         text: "Reports",
               route: "/reports",
         
@@ -87,7 +106,7 @@ export const sideBarRoute = [
           
    
     {
-        icon: "",
+        icon: (active: boolean) => <PeopleSvg isActive={active} /> ,
         text: "Analytics",
         children: [
             {
@@ -127,7 +146,7 @@ export const sideBarRoute = [
     },
      // settings
        {
-        icon: "",
+           icon: (active: boolean) => <SettingsSvg isActive={active} /> ,
         text: "Settings",
            route: "/settings",
         
